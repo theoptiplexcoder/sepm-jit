@@ -1,0 +1,475 @@
+* {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'MyFont', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Load custom font properly */
+@font-face {
+    font-family: 'MyFont';
+    src: url('static/AurulentSansMNerdFontMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global styling */
+body {
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000;
+    border-bottom: 2px solid #00ff00;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #00ff00;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.25rem;
+}
+
+.nav-links a:hover {
+    border-bottom-color: #00ff00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 20px;
+    background: linear-gradient(135deg, #000 0%, #0a2a0a 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#me {
+    border-radius: 4em;
+    object-fit: cover;
+}
+
+.typing {
+    width: 22ch;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00ff00;
+    font-family: 'MyFont', monospace;
+    font-size: 1.5rem;
+    animation: typing 3s steps(33), blink .5s infinite;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 22ch; }
+}
+
+@keyframes blink {
+    from { border-color: #00ff00; }
+    to { border-color: transparent; }
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 20px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;
+    max-width: 900px;
+    background: #000;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px 0 rgba(0, 255, 0, 0.1);
+}
+
+.profile-img {
+    flex: 0 0 300px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.card-content .title {
+    font-size: 1.5rem;
+    color: #888;
+    margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #888;
+    margin: 0 0 1.5rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    color: #00ff00;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1rem;
+    background-color: #000;
+}
+
+.btn:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #00ff00;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 20px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    background: #000;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    padding: 3rem;
+}
+
+.contact-container h1 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-container .subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    background-color: #0a0a0a;
+    color: #00ff00;
+    font-family: 'MyFont', monospace;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.submit-btn {
+    padding: 0.75rem;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 3rem 20px;
+    min-height: 80vh;
+}
+
+.portfolio-section h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-section .subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 255, 0, 0.2);
+}
+
+.project-header h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #00ff00;
+    font-size: 1.5rem;
+}
+
+.project-desc {
+    color: #888;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-link {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    color: #00ff00;
+}
+
+/* Resume Section */
+.resume-section {
+    padding: 3rem 20px;
+    min-height: 100vh;
+}
+
+.resume-section h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.resume-section .subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        flex: 0 0 100%;
+    }
+
+    .card-content {
+        min-width: unset;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    .typing {
+        font-size: 1.2rem;
+        width: 18ch;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .card-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .typing {
+        font-size: 1rem;
+        width: 15ch;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
